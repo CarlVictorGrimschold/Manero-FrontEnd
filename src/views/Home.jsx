@@ -1,8 +1,16 @@
 import React from 'react'
+import Header from './Components/Kevin/Header'
+import Navbar from './Components/Kevin/Navbar'
+import Showcase from './Components/Kevin/Showcase'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Header/>
+      <Showcase/>
+      
+      <Navbar/>
+    </div>
   )
 }
 
