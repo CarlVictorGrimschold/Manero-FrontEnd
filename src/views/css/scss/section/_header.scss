@@ -1,0 +1,37 @@
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+    top: 0;
+    width: 100%;
+    background-color: $bg-transparent-light-1;
+    height: 50px;
+    .Logotype{
+       width: 100px; 
+    }
+    .logo{
+        font-size: 25px;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+        color: $color-dark-2;
+        display: flex;
+        justify-content: center;
+    }
+
+    }
+    .link {
+        position: relative;
+        height: 50px;
+        width: 50px;
+        @include content-center;
+        @include default-colors;
+        text-decoration: none;
+        margin: 0.2rem;
+
+        &:hover,
+        &.active {
+            text-decoration: none;
+        }
+}
