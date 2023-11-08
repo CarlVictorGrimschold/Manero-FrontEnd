@@ -1,15 +1,18 @@
-import React from 'react'
-import Header from './Components/Kevin/Header'
-import Navbar from './Components/Kevin/Navbar'
-import Showcase from './Components/Kevin/Showcase'
+// import React from 'react'
+// import Header from './Components/Kevin/Header'
+// import Navbar from './Components/Kevin/Navbar'
+// import Showcase from './Components/Kevin/Showcase'
+
+import LoginView from "../components/view/LoginView"
 
 const Home = () => {
   return (
     <div>
-      <Header/>
+      <LoginView/>
+      {/* <Header/>
       <Showcase/>
       
-      <Navbar/>
+      <Navbar/> */}
     </div>
   )
 }
