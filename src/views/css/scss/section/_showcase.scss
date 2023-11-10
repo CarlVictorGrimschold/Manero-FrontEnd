@@ -1,0 +1,56 @@
+.showcase {
+    background: rgb(207, 222, 238);
+    // background: linear-gradient(90deg, $color-light-3 0%, $color-light-2 100%);
+    width: 100%;
+
+    .container {
+        display: flex;
+        justify-content: left;
+        padding-top: 40px;
+        padding-bottom: 10px;
+
+        @include xl {
+            justify-content: space-between;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .content {
+        text-align: left;
+
+    
+        
+
+        @include xl {
+            text-align: left;
+        }
+
+        .title-1 {
+            @include font-title-2;
+            width: 190px;
+            color: $color-light-1;
+            margin-left: 10px;
+            
+        }
+        .title-2 {
+            @include font-title-3;
+            color: $color-light-1;
+            margin-left: 10px;
+            
+            
+        }
+    }
+
+    img {
+        display: none;
+        margin-right: -50px;
+        max-height: 745px;
+        width: auto;
+    
+        @include xl {
+            display: block;
+        }
+    }
+}
+        
