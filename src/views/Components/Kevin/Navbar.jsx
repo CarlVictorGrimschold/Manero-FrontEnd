@@ -1,13 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
   return (
    <footer>
+    <Link to="/homepageview">
+          <div>
+              <a className="link">
+                <i className="fa-solid fa-house"></i>
+              </a>
+          </div>
+      </Link>
     <div>
-        <a class="link" href="#"><i class="fa-solid fa-house"></i></a>
-    </div>
-    <div>
-    <a class="link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <a class="link"><i class="fa-solid fa-magnifying-glass"></i></a>
     </div>
     <div>
     <a className="link" href="#"><i className="fa-regular fa-bag-shopping"></i>

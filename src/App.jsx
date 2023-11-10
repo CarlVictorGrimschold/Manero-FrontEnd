@@ -5,6 +5,7 @@ import LoginView from './components/view/LoginView'
 import RegisterView from './components/view/RegisterView'
 import AccountCreated from './components/partials/AccountCreated'
 import Homepageview from './components/view/homepageview'
+import Login2 from './contexts/AuthContext'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/registerview" element={<RegisterView />} />
         <Route path="/accountcreated" element={<AccountCreated/>} />
         <Route path="/homepageview" element={<Homepageview/>} />
+        <Route path='loginview' element={<Login2/>}/>
       </Routes>
     </BrowserRouter>
   )

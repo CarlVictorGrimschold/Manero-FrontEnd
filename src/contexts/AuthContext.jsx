@@ -1,7 +1,8 @@
 
 //version-3   
 import { useState } from "react";
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 
 function Login2() {
@@ -25,6 +26,7 @@ function Login2() {
             if (result.status === 200) {
                 const data = await result.json();
                 sessionStorage.setItem('apiKey', data.apiKey)
+                window.location.replace('/homepageview')
             } else {
                 setShowErrorMessage(true)   
             }
@@ -81,6 +83,7 @@ function Login2() {
                     </div>
                 </div>
                 <br />
+                
                 <div className="form-group">
                     <button id="signInButton" type="submit" className="sign-in-button">
                         Sign In
