@@ -6,6 +6,8 @@ import RegisterView from './components/view/RegisterView'
 import AccountCreated from './components/partials/AccountCreated'
 import Homepageview from './components/view/homepageview'
 import Login2 from './contexts/AuthContext'
+import PaymentMethod from './views/Components/Victor/PaymentMethod'
+import AddANewCard from './views/Components/Victor/AddANewCard'
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/accountcreated" element={<AccountCreated/>} />
         <Route path="/homepageview" element={<Homepageview/>} />
         <Route path='loginview' element={<Login2/>}/>
+        <Route path='/PaymentMethod' element={<PaymentMethod/>}/>
+        <Route path='/AddANewCard' element={<AddANewCard/>} />
       </Routes>
     </BrowserRouter>
   )
