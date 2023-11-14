@@ -1,0 +1,77 @@
+.card-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  
+    .card-form-section {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      font-size: 16px; 
+     
+  
+      .back-button {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+       
+      }
+      .toptext {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto; 
+        width: 100%; 
+       
+      }
+          
+       }
+       .spacer {
+        visibility: hidden; 
+        width: 48px; 
+      }
+    }
+    .Cardholding {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding:0rem;
+      border: none;
+          
+    }
+ 
+    label {
+      margin-bottom: 5px;
+    }
+  
+   .card-display {
+      margin-bottom: 20px;
+    }
+  
+    .input-form {
+      display: flex;
+      flex-direction: column;
+      border: none;
+   
+    
+    
+      input {
+        margin-bottom: 20px;
+        padding: 1px;
+        font-size: 16px;  
+        border: none;
+      }
+  
+      .expiry-cvv {
+        display: flex;
+        justify-content: space-between;
+        
+          
+        div {
+          flex-basis: 45%;
+        }
+      }      
+    }
+  
