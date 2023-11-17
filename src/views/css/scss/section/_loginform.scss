@@ -1,169 +1,174 @@
-
-.signin h4 {
+.LoginForm {
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-family: 'Mulish', sans-serif;
-    font-weight: 900;
-  }
-  .welcome-section {
-    display: flex;
-    justify-content:center;
-    align-items: center;
-  }
-  .welcome-back {
-    font-size: 42px;
-    margin-top: 70px;
-    margin-bottom: 15px;    
-    font-family: 'Mulish', sans-serif;
-    font-weight: 750;
-  }
-.text1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 100;
-    font-size: medium;
-    color: #5d5d5d;
-    font-family: 'Mulish', sans-serif;
-}
-.labels {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-}
-
-.form-group {
-    position: relative; 
-}
-
-.placeholder {
-    position: absolute; 
-    top: -9px; 
-    left: 18px; 
-    background-color: white; 
-    padding: 0 5px; 
-    font-size: 14px;
-    color:#5d5d5d; 
-}
-
-.form-control {
-    border: 1px solid #ccc; 
-    padding: 10px; 
-    border-radius: 30px;
-    height: 30px;
-    width: 300px;
-    font-size: 15px; 
-}
-
-.remember-me input[type="checkbox"] {
-    
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ccc;
-    border-radius: 6px;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-.remember-me {
-    color: #5d5d5d;
-}
-
-.remember-me input[type="checkbox"]:checked {
-    background-color: #113358;
-    border: 2px solid #c9c9c9;
-    
-}
-
-.remember-forgot-password {
-    display: flex;
-    justify-content: space-between;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-    margin-right: 10px;
-    font-family: 'Mulish', sans-serif;
-}
-
-.sign-in-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    color: #fff;
-    font-size: 20px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    height: 50px;
-    width: 100%;
-    margin-top: 15px;
-}
-.form-group1 {
-    display: flex;
-}
-
-.text2 {
-    color: #898888;
-    margin-left: 8px;
-    font-family: 'Mulish', sans-serif;
-}
-.register {
-    margin-left: 9px;
-    font-weight: 600;
-    font-family: 'Mulish', sans-serif;
-}
 
 
-/* .social-icons {
+        h4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Mulish', sans-serif;
+            font-weight: 900;
+        }
+        .welcome-section {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .welcome-back {
+            font-size: 42px;
+            margin-top: 70px;
+            margin-bottom: 15px;    
+            font-family: 'Mulish', sans-serif;
+            font-weight: 750;
+        }
+        .text1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 100;
+            font-size: medium;
+            color: #5d5d5d;
+            font-family: 'Mulish', sans-serif;
+        }
+        .labels {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
 
-} */
-/* .MANERO {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 30px;
-    padding-left: 40px;
-    padding-right: 40px;
-} */
-.MANERO {
-    display: flex;
-    justify-content: space-around;
-}
+        .form-group {
+            position: relative; 
+        }
 
-.TW {
-    text-align: center;
-}
-.FB {
-    text-align: right;
-    margin-left: 45px;
-}
-.GP {
-    margin-right: 45px;
-    text-align: left;
-}
+        .placeholder {
+            position: absolute; 
+            top: -9px; 
+            left: 18px; 
+            background-color: white; 
+            padding: 0 5px; 
+            font-size: 14px;
+            color:#5d5d5d; 
+        }
 
-.FB img, .TW img, .GP img {
-    width: 70px; 
-    margin-top: 30px;
-}
+        .form-control {
+            border: 1px solid #ccc; 
+            padding: 10px; 
+            border-radius: 30px;
+            height: 30px;
+            width: 300px;
+            font-size: 15px; 
+        }
 
-//   .social-button {
-//     background: none; /* Ta bort bakgrundsfärgen om det finns någon */
-//     border: none; /* Ta bort kantlinjen om det finns någon */
-//     cursor: pointer;
-//   }
+        .remember-me input[type="checkbox"] {
+            
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .remember-me {
+            color: #5d5d5d;
+        }
 
-// .message {
-//     display: flex;
-//     justify-content: center;
-// }
-.errormessagelogin {
-    color: red;
-    text-align: center;
-    margin-top: 10px;
-}
+        .remember-me input[type="checkbox"]:checked {
+            background-color: #113358;
+            border: 2px solid #c9c9c9;
+            
+        }
+
+        .remember-forgot-password {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            margin-right: 10px;
+            font-family: 'Mulish', sans-serif;
+        }
+
+        .sign-in-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: #fff;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            height: 50px;
+            width: 100%;
+            margin-top: 15px;
+        }
+        .form-group1 {
+            display: flex;
+        }
+
+        .text2 {
+            color: #898888;
+            margin-left: 8px;
+            font-family: 'Mulish', sans-serif;
+        }
+        .register {
+            margin-left: 9px;
+            font-weight: 600;
+            font-family: 'Mulish', sans-serif;
+        }
+
+
+        /* .social-icons {
+
+        } */
+        /* .MANERO {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 30px;
+            padding-left: 40px;
+            padding-right: 40px;
+        } */
+        .MANERO {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .TW {
+            text-align: center;
+        }
+        .FB {
+            text-align: right;
+            margin-left: 45px;
+        }
+        .GP {
+            margin-right: 45px;
+            text-align: left;
+        }
+
+        .FB img, .TW img, .GP img {
+            width: 70px; 
+            margin-top: 30px;
+        }
+
+        //   .social-button {
+        //     background: none; /* Ta bort bakgrundsfärgen om det finns någon */
+        //     border: none; /* Ta bort kantlinjen om det finns någon */
+        //     cursor: pointer;
+        //   }
+
+        // .message {
+        //     display: flex;
+        //     justify-content: center;
+        // }
+        .errormessagelogin {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+}        
