@@ -1,8 +1,6 @@
 
 //version-3   
 import { useState } from "react";
-import { Link } from 'react-router-dom';
-
 
 
 function Login2() {
@@ -25,8 +23,15 @@ function Login2() {
             
             if (result.status === 200) {
                 const data = await result.json();
-                sessionStorage.setItem('apiKey', data.apiKey)
-                window.location.replace('/homepageview')
+
+                const expirationDate = new Date();
+                expirationDate.setDate(expirationDate.getDate() + 7); 
+                document.cookie = `apiKey=${data.result.result.apiKey}; expires=${expirationDate.toUTCString()}; path=/;`;
+
+                localStorage.setItem("token", data.token);
+                //localStorage.setItem("apiKey", data.result.result.apiKey);
+                sessionStorage.setItem('apiKey', data.result.result.apiKey);
+                window.location.replace('/homepageview');
             } else {
                 setShowErrorMessage(true)   
             }
@@ -36,22 +41,23 @@ function Login2() {
 
   return (
         <div className="login">
+        <section className="LoginForm">
         <form onSubmit={handleSubmit}>
              <section className="labels">
                 <div>
-                <div className="form-group">
-                    <label className="placeholder" htmlFor="email">
-                        Email
-                    </label>
-                    <input
-                        id="email"
-                        className="form-control"
-                        value={email}  
-                        onChange={(e) => setEmail(e.target.value)}  
-                        name="email"
-                        type="email"
-                        placeholder="E-mail"
-                    />
+                    <div className="form-group">
+                        <label className="placeholder" htmlFor="email">
+                            Email
+                        </label>
+                        <input
+                            id="email"
+                            className="form-control"
+                            value={email}  
+                            onChange={(e) => setEmail(e.target.value)}  
+                            name="email"
+                            type="email"
+                            placeholder="E-mail"
+                        />
                     </div>
                     <br />
                     <div className="form-group">
@@ -121,7 +127,8 @@ function Login2() {
                 </div>
              </section>
           
-        </form>
+             </form>
+        </section>
         </div>
     );
 }

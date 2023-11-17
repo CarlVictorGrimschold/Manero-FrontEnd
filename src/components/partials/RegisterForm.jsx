@@ -4,7 +4,7 @@ import '../../views/css/style.min.css';
 function RegisterForm(){
 
     return (
-        <div>
+        <div className="RegisteerForm">
           <section className="signup1">
             <div className="goblack">
               <a href="/loginview" className="icon-Back" title="Tillbaka till inloggning">

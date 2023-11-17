@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 function Signup1() {
 
         const [firstname, setFirstName] = useState("");
@@ -46,36 +47,33 @@ function Signup1() {
                 },
                 body: JSON.stringify({firstname, lastname, email, password, firstnameError, lastnameerror, emailError, passwordeerror})                
             });
-             //console.log(setShowErrorMessage);
               
             if (result.status === 200){
-                const data = await result.json();
-                sessionStorage.setItem('apikey', data.apikey);
-                
+              const data = await result.json();
+
+              const expirationDate = new Date();
+              expirationDate.setDate(expirationDate.getDate() + 7); 
+              document.cookie = `apiKey=${data.result.result.apiKey}; expires=${expirationDate.toUTCString()}; path=/;`;
+
+              localStorage.setItem("token", data.token);
+              //localStorage.setItem("apiKey", data.result.result.apiKey);
+              sessionStorage.setItem('apiKey', data.result.result.apiKey);
+              window.location.replace('/homepageview');
+
+                // const data = await result.json();
+                // sessionStorage.setItem('apikey', data.apikey);
+                // window.location.replace('/homepageview')
             }
             // else {
             //     setShowErrorMessage(true) 
             // }
         }
-        // const handleSignupClick = () => {
-        //   if (
-        //     firstname &&
-        //     lastname &&
-        //     email &&
-        //     password &&
-        //     confirmpassword &&
-        //     password === confirmpassword
-        //   ) {
-        //     navigate("/accountcreated");
-        //   } else {
-        //     // ("Fyll i alla fält korrekt innan du går vidare.");
-        //     setShowErrorMessage(true) 
-        //   }
-        // };
+      
 
 
     return(
         <div className="register">
+          <section className="RegisteerForm">
             <form onSubmit={handleSubmit}>
             <section className="labels">
             <div>
@@ -182,6 +180,7 @@ function Signup1() {
             </div>
 
             </form>
+            </section>
           
         </div>
     );

@@ -3,7 +3,7 @@ import '../../views/css/style.min.css';
 
 function AccountCreated (){
     return(
-        <div>
+        <div className="AccountCreated">
              <div className="MANERO">
                 <img src="src\Assets\images\loginimages\headerlogo.png" alt="MANERO" />
                 </div>
