@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import creditCardImage3 from '../../../Assets/images/loginimages/card3.png';
+import creditCardImage3 from '../../../Assets/images/loginimages/card2.png';
 
 const AddANewCard = () => {
   const [cardDetails, setCardDetails] = useState({
@@ -51,7 +51,7 @@ const AddANewCard = () => {
     <section className="card-form">
       <section className="card-form-section">
         <button className="back-button">{"<"}</button>
-        <h1 className="toptext">Add a new card</h1>
+        <h1 className="toptext">Edit card</h1>
         <div className="spacer"></div>
       </section>
 
@@ -97,7 +97,7 @@ const AddANewCard = () => {
           onChange={handleChange}
         />
 
-        <button type="submit" className="standard-button">SAVE CARD</button>
+        <button type="submit" className="standard-button">SAVE EDIT</button>
       </form>
     </section>
   );
