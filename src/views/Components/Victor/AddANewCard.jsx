@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import creditCardImage3 from '../../../Assets/images/loginimages/card3.png';
+import { Link } from 'react-router-dom';
 
 const AddANewCard = () => {
   const [cardDetails, setCardDetails] = useState({
@@ -50,7 +51,9 @@ const AddANewCard = () => {
   return (
     <section className="card-form">
       <section className="card-form-section">
-        <button className="back-button">{"<"}</button>
+        <Link to="/PaymentMethod"> 
+            <i className="fas fa-chevron-left"></i>
+        </Link>
         <h1 className="toptext">Add a new card</h1>
         <div className="spacer"></div>
       </section>

@@ -8,7 +8,9 @@ import Homepageview from './components/view/homepageview'
 import Login2 from './contexts/AuthContext'
 import PaymentMethod from './views/Components/Victor/PaymentMethod'
 import AddANewCard from './views/Components/Victor/AddANewCard'
+import EditCard from './views/Components/Victor/EditCard'
 import Myprofileview from './components/view/MyProfileView'
+
 function App() {
   return (
     <BrowserRouter>
@@ -18,10 +20,11 @@ function App() {
         <Route path="/registerview" element={<RegisterView />} />
         <Route path="/accountcreated" element={<AccountCreated/>} />
         <Route path="/myprofile" element={<Myprofileview/>} />
-        <Route path="/homepageview" element={<Homepageview/>} />
+        <Route path="/homepageview" element={<Homepageview/>}/>
         <Route path='loginview' element={<Login2/>}/>
         <Route path='/PaymentMethod' element={<PaymentMethod/>}/>
-        <Route path='/AddANewCard' element={<AddANewCard/>} />
+        <Route path='/AddANewCard' element={<AddANewCard/>}/>
+        <Route path='/EditCard' element={<EditCard/>}/>
       </Routes>
     </BrowserRouter>
   )

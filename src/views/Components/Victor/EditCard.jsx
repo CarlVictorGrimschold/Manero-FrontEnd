@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import creditCardImage3 from '../../../Assets/images/loginimages/card2.png';
-
-const AddANewCard = () => {
+import { Link } from 'react-router-dom';
+const EditCard = () => {
   const [cardDetails, setCardDetails] = useState({
     cardHolderName: '',
     cardNumber: '',
@@ -16,7 +16,7 @@ const AddANewCard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Formatera expirationDate och övrig data för att matcha API-controller förväntningar
+    //Formatera expirationDate och övrig data för att matcha API-controller förväntningar
     const formattedDetails = {
       cardHolderName: cardDetails.cardHolderName,
       cardNumber: parseInt(cardDetails.cardNumber, 10),
@@ -39,10 +39,10 @@ const AddANewCard = () => {
         throw new Error('Network response was not ok');
       }
 
-      // Hantera framgångsrikt svar här
+      //Hantera framgångsrikt svar här
       console.log('Card added successfully:', await response.json());
     } catch (error) {
-      // Hantera fel här
+      //Hantera fel här
       console.error('Error while adding card:', error);
     }
   };
@@ -50,7 +50,9 @@ const AddANewCard = () => {
   return (
     <section className="card-form">
       <section className="card-form-section">
-        <button className="back-button">{"<"}</button>
+        <Link to="/PaymentMethod"> 
+          <i className="fas fa-chevron-left"></i>
+        </Link>
         <h1 className="toptext">Edit card</h1>
         <div className="spacer"></div>
       </section>
@@ -103,4 +105,4 @@ const AddANewCard = () => {
   );
 };
 
-export default AddANewCard;
+export default EditCard;

@@ -35,9 +35,9 @@ const PaymentMethod = () => {
   return (
     <section className="containerPayment">
       <div className='master'>
-        <button className="backButton">
+        <Link to="/myprofile"> 
           <i className="fas fa-chevron-left"></i>
-        </button>
+        </Link>
         <h1 className="toptext">Payment Method</h1>
         <div className="spacer"></div> 
       </div>
@@ -62,48 +62,33 @@ const PaymentMethod = () => {
         </div>
       </section>
 
-      <ul className="paymentList">
-        {/* Betalningsmetoder listan */}
-        <li className="paymentItem">
-          <span>Apple Pay
-          <i id='checkpaymentmetod' className="fa-solid fa-check check-icon"></i> </span>
-          <button className="editButton"><i className="fa-solid fa-pen"></i></button>
-        </li>
-        <li className="paymentItem">
-          <span>Pay Pal
-          <i className="fa-solid fa-check check-icon"></i> </span>
-          <button className="editButton"><i className="fa-solid fa-pen"></i></button>
-        </li>
-        <li className="paymentItem">
-          <span>Payoneer</span>
-          <button className="addButton"><i className="fa-solid fa-plus"></i></button>
-        </li>
-      </ul>
+      <section className = "KnappenHugo" >
       <div>
-      <Link to = "/AddANewCard">
-        <button type="button" className="standard-button">Add card</button>
+        
+        <Link to = "/AddANewCard">
+          <button type="button" className="standard-button">Add card</button>
         </Link>
+        <Link to = "/EditCard">
+          <button type="button" className="standard-button">Edit card</button>
+        </Link>
+       
       </div>
 
-      {/* Input för att ange ID för kortet som ska raderas */}
-
-      <input 
-        type="text"
-       // style = {{padding:'10 rem'}}
-        value={cardIdToDelete} 
-        onChange={(e) => setCardIdToDelete(e.target.value)} 
-        placeholder="Enter Card ID to Delete"
-        className="inputField" 
-      />
+  
       
-
-
       <div>
        
         <button onClick={deletecard} type="button" className="standard-button">Remove card</button> 
         
       </div>
-
+      </section>
+      <input 
+        type="text"
+        value={cardIdToDelete} 
+        onChange={(e) => setCardIdToDelete(e.target.value)} 
+        placeholder="Enter Card ID to Delete"
+        className="inputField" 
+      />
      
 
     </section>
