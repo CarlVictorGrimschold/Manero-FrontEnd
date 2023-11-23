@@ -134,7 +134,7 @@ function UserContext() {
                         <div className="payment-method">                    
                          <i className="fa-thin fa-credit-card"></i>
                          <p>Payment Method</p>
-                         <Link> 
+                         <Link to="/PaymentMethod"> 
                           <i className="fa-thin fa-arrow-right"></i>
                          </Link>
                         </div>
