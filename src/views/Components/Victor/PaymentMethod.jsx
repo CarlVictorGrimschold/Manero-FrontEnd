@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import creditCardImage1 from '../../../Assets/images/loginimages/card1.png';
 import creditCardImage2 from '../../../Assets/images/loginimages/card2.png';
 import creditCardImage3 from '../../../Assets/images/loginimages/card3.png';
+
 
 const PaymentMethod = () => {
   const [cardIdToDelete, setCardIdToDelete] = useState('');
@@ -77,17 +79,37 @@ const PaymentMethod = () => {
           <button className="addButton"><i className="fa-solid fa-plus"></i></button>
         </li>
       </ul>
-      
+      <div>
+      <Link to = "/AddANewCard">
+        <button type="button" className="standard-button">Add card</button>
+        </Link>
+      </div>
+
       {/* Input för att ange ID för kortet som ska raderas */}
+
       <input 
-        type="text" 
+        type="text"
+       // style = {{padding:'10 rem'}}
         value={cardIdToDelete} 
         onChange={(e) => setCardIdToDelete(e.target.value)} 
         placeholder="Enter Card ID to Delete"
         className="inputField" 
       />
-      <button onClick={deletecard} type="button" className="standard-button">DELETE CARD</button> 
+      
+
+
+      <div>
+       
+        <button onClick={deletecard} type="button" className="standard-button">Remove card</button> 
+        
+      </div>
+
+     
+
     </section>
+
+
+
   );
 }
 
