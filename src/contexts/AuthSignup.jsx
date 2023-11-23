@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Signup1() {
 
@@ -13,6 +14,8 @@ function Signup1() {
         const [emailError, setEmailError] = useState("");
         const [passwordeerror, setPasswordeError] = useState("");
         
+
+        const navigate = useNavigate()
 
         const handleSubmit = async (e) => {
             e.preventDefault();
@@ -48,7 +51,7 @@ function Signup1() {
                 body: JSON.stringify({firstname, lastname, email, password, firstnameError, lastnameerror, emailError, passwordeerror})                
             });
               
-            if (result.status === 200){
+            if (result.status === 201){
               const data = await result.json();
 
               const expirationDate = new Date();
@@ -58,7 +61,9 @@ function Signup1() {
               localStorage.setItem("token", data.token);
               //localStorage.setItem("apiKey", data.result.result.apiKey);
               sessionStorage.setItem('apiKey', data.result.result.apiKey);
-              window.location.replace('/homepageview');
+              // window.location.replace("/homepageview");
+              navigate('/homepageview', { replace: true })
+
 
                 // const data = await result.json();
                 // sessionStorage.setItem('apikey', data.apikey);
