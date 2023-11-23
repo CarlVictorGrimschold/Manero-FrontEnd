@@ -45,18 +45,11 @@ function MyProfile(){
                      <i className="fa-thin fa-arrow-right"></i>
                     </div>
                     <div className="strek2"></div>
-                    <Link to="/PaymentMethod">
-                        <div className="payment-method">                    
-                            <i className="fa-thin fa-credit-card"></i>
-                            <p>Payment Method</p>
-                            <i className="fa-thin fa-arrow-right"></i>
-                        </div>
-                    </Link>
-                    {/* <div className="payment-method">                    
+                    <div className="payment-method">                    
                     <i className="fa-thin fa-credit-card"></i>
                     <p>Payment Method</p>
                     <i className="fa-thin fa-arrow-right"></i>
-                    </div> */}
+                    </div>
                     <div className="strek2"></div>
                     <div className="my-address">
                     <i className="fa-thin fa-location-dot"></i>
