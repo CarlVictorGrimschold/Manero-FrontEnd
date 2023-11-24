@@ -2,12 +2,14 @@
  import Navbar from '../../views/Components/Kevin/Navbar';
 import Showcase from '../../views/Components/Kevin/Showcase';
 import FeaturedProducts from '../../views/Components/Kevin/FeaturedProducts';
+import Showcase2 from '../../views/Components/Kevin/Showcase2';
 function Homepageview() {
     return(
-        <div>
+        <div className='HomePageview'>
             <Header/>
             <Showcase/>
             <FeaturedProducts/>
+            <Showcase2/>
             <Navbar/>
         </div>
     );
