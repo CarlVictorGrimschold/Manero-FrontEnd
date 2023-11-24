@@ -2,6 +2,7 @@
     background: rgb(207, 222, 238);
     // background: linear-gradient(90deg, $color-light-3 0%, $color-light-2 100%);
     width: 100%;
+    
 
     .container {
         display: flex;
@@ -33,6 +34,12 @@
             margin-left: 10px;
             
         }
+        .title-3{
+            @include font-title-2;
+            width: 500px;
+            color: $color-light-1;
+            margin-left: 10px;
+        }
         .title-2 {
             @include font-title-3;
             color: $color-light-1;
@@ -52,5 +59,25 @@
             display: block;
         }
     }
+}
+
+.showcase-button{
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+.product-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: #fff;
+            font-size: 16px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            height: 50px;
+            width: 120px;
+            margin-top: 10px;
 }
         

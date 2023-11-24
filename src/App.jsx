@@ -22,6 +22,7 @@ function App() {
         <Route path='loginview' element={<Login2/>}/>
         <Route path='/PaymentMethod' element={<PaymentMethod/>}/>
         <Route path='/AddANewCard' element={<AddANewCard/>} />
+        
       </Routes>
     </BrowserRouter>
   )
