@@ -88,7 +88,7 @@ function MyProfile(){
                     <i className="fa-thin fa-rectangle-ad"></i>
                     <p>My Promocodes</p>
                     <i className="fa-thin fa-arrow-right"></i>
-                    </div>
+                    </div> 
                     <div className="strek2"></div>
                     <div className="sign-out">
                     <i className="fa-thin fa-right-from-bracket"></i>
