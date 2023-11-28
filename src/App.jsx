@@ -10,6 +10,7 @@ import PaymentMethod from './views/Components/Victor/PaymentMethod'
 import AddANewCard from './views/Components/Victor/AddANewCard'
 import EditCard from './views/Components/Victor/EditCard'
 import Myprofileview from './components/view/MyProfileView'
+import FeaturedView from './views/Components/Kevin/FeaturedView'
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
         <Route path='/PaymentMethod' element={<PaymentMethod/>}/>
         <Route path='/AddANewCard' element={<AddANewCard/>}/>
         <Route path='/EditCard' element={<EditCard/>}/>
+        <Route path='/ViewAllFeatrued' element={<FeaturedView/>}/>
+
       </Routes>
     </BrowserRouter>
   )
