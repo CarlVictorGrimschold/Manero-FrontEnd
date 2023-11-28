@@ -7,18 +7,18 @@ const Navbar = () => {
    <footer>
     <Link to="/homepageview">
           <div>
-              <a className="link">
+              <div className="link">
                 <i className="fa-solid fa-house"></i>
-              </a>
+              </div>
           </div>
           
       </Link>
       <Link to ="/myprofile">
            <div>
-                <a className="/myprofile" href="#">
+                <div className="/myprofile" href="#">
                     <i className="fa-regular fa-circle-user">
                     </i>
-                </a>
+                </div>
             </div>
       </Link>
 
