@@ -1,0 +1,40 @@
+.Featured-header-viewAll{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+
+.titleviewall {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+  
+}
+.Shopping-cart-viewall{
+    text-align: center;
+    
+    
+}
+.View-All-back{
+    font-size: 15px;
+    font-weight: 400;
+    width: 50px;
+    text-decoration: none;
+    text-align: center;
+    color: $color-dark-1;
+    
+
+}
+.viewall-organice-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.Sorting-by{
+
+    border: none;
+    font-family: $font-poppins;
+}
