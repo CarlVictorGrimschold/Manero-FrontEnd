@@ -11,6 +11,8 @@ import AddANewCard from './views/Components/Victor/AddANewCard'
 import EditCard from './views/Components/Victor/EditCard'
 import Myprofileview from './components/view/MyProfileView'
 import FeaturedView from './views/Components/Kevin/FeaturedView'
+import BestSellerProducts from './views/Components/Kevin/BestSellerProducts'
+import BestSellerview from './views/Components/Kevin/BestSellerView'
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route path='/AddANewCard' element={<AddANewCard/>}/>
         <Route path='/EditCard' element={<EditCard/>}/>
         <Route path='/ViewAllFeatrued' element={<FeaturedView/>}/>
+        <Route path='/BestSeller' element={<BestSellerProducts/>}/>
+        <Route path='/ViewAllBestSeller' element={<BestSellerview/>}/>
 
       </Routes>
     </BrowserRouter>
