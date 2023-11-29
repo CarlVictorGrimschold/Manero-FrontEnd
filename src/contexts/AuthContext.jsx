@@ -1,3 +1,5 @@
+//AuthContext.jsx fil 
+
 
 //version-3   
 import { useState } from "react";
@@ -8,7 +10,6 @@ function Login2() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showErrorMessage, setShowErrorMessage] = useState(false)
-  //const { setUser } = useUser();
 
   const navigate = useNavigate()
   const handleSubmit = async (e) => {
@@ -26,25 +27,20 @@ function Login2() {
             if (result.status === 200) {
                 const data = await result.json();
 
-                // Set user data in the context
-                // setUser({
-                //     firstName: data.result.result.firstName,
-                //     lastName: data.result.result.lastName,
-                //     email: data.result.result.email,
-                // });
-
                 const expirationDate = new Date();
                 expirationDate.setDate(expirationDate.getDate() + 7); 
                 document.cookie = `apiKey=${data.result.result.apiKey}; expires=${expirationDate.toUTCString()}; path=/;`;
                 localStorage.setItem("token", data.token);
+                localStorage.setItem("firstname", data.result.result.user.firstName);
+                localStorage.setItem("lastname", data.result.result.user.lastName);
+                localStorage.setItem("email", data.result.result.user.email);
+                localStorage.setItem("imageUrl", data.result.result.user.imageUrl);
                 //localStorage.setItem("apiKey", data.result.result.apiKey);
                 sessionStorage.setItem('apiKey', data.result.result.apiKey);
-                // window.location.replace('/homepageview');
                 navigate('/homepageview', { replace: true })
             } else {
                 setShowErrorMessage(true)   
             }
-        
         
     }
 
@@ -143,4 +139,3 @@ function Login2() {
 }
 
 export default Login2;
-

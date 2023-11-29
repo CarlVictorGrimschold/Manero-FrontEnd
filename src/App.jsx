@@ -13,7 +13,8 @@ import Myprofileview from './components/view/MyProfileView'
 import FeaturedView from './views/Components/Kevin/FeaturedView'
 import BestSellerProducts from './views/Components/Kevin/BestSellerProducts'
 import BestSellerview from './views/Components/Kevin/BestSellerView'
-
+import PaymentmethodeSite from './components/view/Paymentmethodview'
+import EditProfileView from './components/view/EditprofileView'
 function App() {
   return (
     <BrowserRouter>
@@ -31,7 +32,8 @@ function App() {
         <Route path='/ViewAllFeatrued' element={<FeaturedView/>}/>
         <Route path='/BestSeller' element={<BestSellerProducts/>}/>
         <Route path='/ViewAllBestSeller' element={<BestSellerview/>}/>
-
+        <Route path ="/paymentmethodsite" element={<PaymentmethodeSite/>}/>
+        <Route path="/editeprofileview" element={<EditProfileView/>}/>
       </Routes>
     </BrowserRouter>
   )
