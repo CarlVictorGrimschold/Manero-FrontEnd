@@ -1,3 +1,5 @@
+//MyProfileForm.jsx fil 
+
 import { Link } from 'react-router-dom';
 import "../../contexts/userContext";
 import "../../views/css/style.min.css";
@@ -25,18 +27,20 @@ function MyProfile(){
                 |
             </div>
             {/* user edit profile */}
-            <section className="circles">
+            {/* <section className="circles">
 
                 <div className="bigcircle">
                     <div className="mediumcircle">
                         <div className="smallcircle">
                             <div className="pen">
-                              <i className="fa-light fa-pen"></i>
+                                <a href="/editeprofileview">
+                                   <i className="fa-light fa-pen"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* get user name and email */}           
             {/* <div className="userinfo">
@@ -88,7 +92,7 @@ function MyProfile(){
                     <i className="fa-thin fa-rectangle-ad"></i>
                     <p>My Promocodes</p>
                     <i className="fa-thin fa-arrow-right"></i>
-                    </div> 
+                    </div>
                     <div className="strek2"></div>
                     <div className="sign-out">
                     <i className="fa-thin fa-right-from-bracket"></i>
@@ -118,6 +122,26 @@ function MyProfile(){
                                         </i>
                                     </a>
                                 </div>
+                        </Link>
+                        <Link>
+                            <div>
+                                <a className="link">
+                                   <i className="fa-solid fa-magnifying-glass">
+                                    </i>
+                                </a>
+                            </div>
+                        </Link>
+                        <Link>
+                            <div>
+                               <a className="link" href="#">
+                                <i className="fa-regular fa-bag-shopping"></i>
+                               </a>
+                            </div>
+                        </Link>
+                        <Link>
+                            <div>
+                            <a className="link" href="#"><i className="fa-regular fa-heart"></i></a>
+                            </div>
                         </Link>
                     </footer>
                 </section>

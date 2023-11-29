@@ -1,0 +1,131 @@
+.EDITE-PROFILE {
+    body {
+        margin: 0 15px 0 15px;
+    }
+    .Edit-Profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Mulish', sans-serif;
+        font-weight: 900;
+        font-size: 20px;
+    }
+
+    .goblack {
+        font-size: 23px;
+        font-weight: 0;
+    }
+    .strek {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        margin-top: 0;
+        }
+
+        .circles{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bigcircle {
+            background-color: #D8DFEE;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        .mediumcircle {
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            margin-right: 5px;
+            z-index: 1;
+            height: 140px;
+            width: 140px;
+            border-radius: 50%;
+            background-color: #e9e9e9;
+            display: flex;
+            justify-content: center;
+            overflow: hidden; 
+          }
+          
+        //   .mediumcircle img {
+        //     // width: 100%;
+        //     // height: 100%;
+        //     margin-left: 20px;
+        //     object-fit: cover; 
+        //     border-radius: 50%;
+        //   }
+          
+        .smallcircle {
+            position: absolute;
+            background-color: #D8DFEE;
+            height: 50px;
+            width: 50px;
+            z-index: 3;
+            margin-top: 100px;
+            border-radius: 50%;
+            margin-left: 75px;
+            display: flex;
+            justify-content: center;
+        }
+        .smallcircle i {
+            margin-top: 15px;
+            display: block;
+        }
+      
+        .labels {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .placeholder {
+            position: absolute;
+            top: -9px; 
+            left: 18px;
+            background-color: white; 
+            padding: 0 5px; 
+            font-size: 14px;
+            color:#3b3b3b; 
+        }
+
+        .form-control {
+            border: 1px solid #ccc; 
+            padding: 10px; 
+            border-radius: 30px;
+            height: 30px;
+            width: 300px;
+            font-size: 15px; 
+        }
+        .create-user-button {
+            background-color: black;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            height: 55px;
+            width: 100%;
+        }
+        .success-message {
+            color: rgb(0, 8, 255);
+            text-align: center;
+        }
+        .error-message {
+            text-align: center;
+            color: rgb(169, 0, 34);
+        }
+        
+        input[disabled] {
+            background-color: #dedede; 
+          }
+
+
+}

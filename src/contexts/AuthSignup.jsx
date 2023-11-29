@@ -1,3 +1,5 @@
+//AuthSignup.jsx fil 
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -13,8 +15,10 @@ function Signup1() {
         const [lastnameerror, setLastnameError] = useState("")
         const [emailError, setEmailError] = useState("");
         const [passwordeerror, setPasswordeError] = useState("");
+        var location = "";
+        var phonenumber = "0";
+        var imageUrl = 'https://i.ytimg.com/vi/L2w9LvMb3io/maxresdefault.jpg';
         
-
         const navigate = useNavigate()
 
         const handleSubmit = async (e) => {
@@ -42,7 +46,7 @@ function Signup1() {
               setShowErrorMessage(true) 
               return;
           }
-         
+          
             const result = await fetch ('https://localhost:7056/api/User/Register', {
                 method:'post',
                 headers: {
@@ -50,31 +54,59 @@ function Signup1() {
                 },
                 body: JSON.stringify({firstname, lastname, email, password, firstnameError, lastnameerror, emailError, passwordeerror})                
             });
-              
+              console.log(result);
             if (result.status === 201){
               const data = await result.json();
 
               const expirationDate = new Date();
               expirationDate.setDate(expirationDate.getDate() + 7); 
               document.cookie = `apiKey=${data.result.result.apiKey}; expires=${expirationDate.toUTCString()}; path=/;`;
-
+              console.log(data);
               localStorage.setItem("token", data.token);
-              //localStorage.setItem("apiKey", data.result.result.apiKey);
+              localStorage.setItem("firstname", data.result.result.user.firstName);
+              localStorage.setItem("lastname", data.result.result.user.lastName);
+              localStorage.setItem("email", data.result.result.user.email);
+              localStorage.setItem("apiKey", data.result.result.apiKey);
               sessionStorage.setItem('apiKey', data.result.result.apiKey);
               // window.location.replace("/homepageview");
-              navigate('/homepageview', { replace: true })
+              CreateProfile();
 
-
-                // const data = await result.json();
-                // sessionStorage.setItem('apikey', data.apikey);
-                // window.location.replace('/homepageview')
+              navigate('/accountcreated', { replace: true })
             }
-            // else {
-            //     setShowErrorMessage(true) 
-            // }
+            else {
+                setShowErrorMessage(true) 
+            }
         }
       
 
+        const CreateProfile = async () => {
+          try {
+            const token = localStorage.getItem("token");
+            const result = await fetch('https://localhost:7056/api/Profile/Create', {
+              method: 'POST',
+              headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                firstname,
+                lastname,
+                imageUrl,
+                phonenumber,
+                location,
+              }),
+            });
+      
+            if (result.status === 201) {
+              console.log('User created successfully!');
+            } else {
+              console.log('Error: ' + result.status);
+            }
+          } catch (error) {
+            console.error('Error creating user:', error);
+          }
+        };
+      
 
     return(
         <div className="register">
