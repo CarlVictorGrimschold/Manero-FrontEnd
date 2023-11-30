@@ -11,7 +11,7 @@ const PaymentMethod = () => {
   const token = localStorage.getItem('token');
 
   const deletecard = async () => {
-    const api = 'https://localhost:7056/api/Card/delete'; // Ersätt med din faktiska API-endpoint
+    const api = 'https://localhost:7056/api/Card/delete'; 
     try {
       const response = await fetch(api, {
         method: 'DELETE',

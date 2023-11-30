@@ -10,6 +10,8 @@ import PaymentMethod from './views/Components/Victor/PaymentMethod'
 import AddANewCard from './views/Components/Victor/AddANewCard'
 import EditCard from './views/Components/Victor/EditCard'
 import Myprofileview from './components/view/MyProfileView'
+import PromoCode from './views/Components/Victor/PromoCode'
+import AddANewANewPromocode from './views/Components/Victor/AddANewPromocode'
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path='/PaymentMethod' element={<PaymentMethod/>}/>
         <Route path='/AddANewCard' element={<AddANewCard/>}/>
         <Route path='/EditCard' element={<EditCard/>}/>
+        <Route path='/PromoCode' element={<PromoCode/>}/>
+        <Route path='/AddANewANewPromocode' element={<AddANewANewPromocode/>}/>
       </Routes>
     </BrowserRouter>
   )

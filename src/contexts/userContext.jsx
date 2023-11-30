@@ -152,7 +152,9 @@ function UserContext() {
                     <div className="my-promocodes">
                     <i className="fa-thin fa-rectangle-ad"></i>
                     <p>My Promocodes</p>
-                    <i className="fa-thin fa-arrow-right"></i>
+                    <Link to="/PromoCode"> 
+                          <i className="fa-thin fa-arrow-right"></i>
+                         </Link>
                     </div>
                     <div className="strek2"></div>
                     <div className="sign-out">
