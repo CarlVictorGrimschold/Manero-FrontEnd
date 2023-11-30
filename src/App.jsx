@@ -15,6 +15,8 @@ import BestSellerProducts from './views/Components/Kevin/BestSellerProducts'
 import BestSellerview from './views/Components/Kevin/BestSellerView'
 import PaymentmethodeSite from './components/view/Paymentmethodview'
 import EditProfileView from './components/view/EditprofileView'
+import AddANewPromocode from'./views/Components/Victor/AddANewPromocode' 
+import PromoCode from'./views/Components/Victor/PromoCode'
 function App() {
   return (
     <BrowserRouter>
@@ -34,6 +36,8 @@ function App() {
         <Route path='/ViewAllBestSeller' element={<BestSellerview/>}/>
         <Route path ="/paymentmethodsite" element={<PaymentmethodeSite/>}/>
         <Route path="/editeprofileview" element={<EditProfileView/>}/>
+        <Route path="/AddANewPromocode" element ={<AddANewPromocode/>}/> 
+        <Route path="PromoCode" element = {<PromoCode/>}/>
       </Routes>
     </BrowserRouter>
   )

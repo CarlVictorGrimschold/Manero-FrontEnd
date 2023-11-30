@@ -26,7 +26,7 @@ const EditCard = () => {
 
     const token = localStorage.getItem('token');
     try {
-      const response = await fetch('https://localhost:7056/api/Card/Add', {
+      const response = await fetch('https://localhost:7056/api/Card/CREATE', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
