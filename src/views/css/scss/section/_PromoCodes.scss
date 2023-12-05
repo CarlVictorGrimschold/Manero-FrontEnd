@@ -12,10 +12,10 @@
   .master{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 45px;
 
     .toptext {
       align-items: center;
-      margin: 0;
       display: flex;
       justify-content: center;
      }
@@ -77,10 +77,11 @@
   }
 
   .promoCodeItem {
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
+
   }
 }

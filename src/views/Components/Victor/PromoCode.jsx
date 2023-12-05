@@ -44,6 +44,18 @@ function PromoCodeComponent() {
         <div className="spacer"></div> 
       </div>
       
+      <section className="promoCodeList">
+        {promoCodes.map((promoCode) => (
+          <div key={promoCode.id} className="promoCodeItem">
+           <div>Id: {promoCode.id}</div> 
+           <div>{promoCode.promoName}</div> 
+           <div>{promoCode.salePercentage}% off</div> 
+           <div> Valid until {promoCode.validity}</div>
+           <div> --------------------------------------------</div>
+          </div>
+        ))}
+      </section>
+
       <section className="KnappenHugo">
         <div>
           <Link to="/AddANewPromocode">
@@ -62,18 +74,6 @@ function PromoCodeComponent() {
             />
           </section>
         </div>
-      </section>
-
-      <section className="promoCodeList">
-        {promoCodes.map((promoCode) => (
-          <div key={promoCode.id} className="promoCodeItem">
-            Id: {promoCode.id}
-            {promoCode.promoName}
-            {promoCode.salePercentage}% off
-            Valid until {promoCode.validity}
-            --------------------------------------------
-          </div>
-        ))}
       </section>
     </section> 
   );
