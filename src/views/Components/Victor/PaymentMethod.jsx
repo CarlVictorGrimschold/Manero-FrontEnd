@@ -1,12 +1,38 @@
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import creditCardImage1 from '../../../Assets/images/loginimages/card1.png';
 import creditCardImage2 from '../../../Assets/images/loginimages/card2.png';
 import creditCardImage3 from '../../../Assets/images/loginimages/card3.png';
 
 
+
 const PaymentMethod = () => {
+  const [creditCards, setCreditCard] = useState([]);
   const [cardIdToDelete, setCardIdToDelete] = useState('');
+
+  useEffect(() => {
+    const fetchCreditCards = async () => {
+      try {
+        const response = await fetch('https://localhost:7056/api/Card/GetAllUserCards',{
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify({ cardId: creditCards }), // Använd cardIdToDelete från state
+        });
+        if (!response.ok) {
+          throw new Error('Failed to fetch credit cards!');
+        }
+        const data = await response.json();
+        setCreditCard(data);
+      } catch (error) {
+        console.error('Error fetching credit cards:', error);
+      }
+    };
+
+    fetchCreditCards();
+  }, []);
 
   const token = localStorage.getItem('token');
 
@@ -43,7 +69,16 @@ const PaymentMethod = () => {
       </div>
       
       <section className="Cardholding">
-        <div id="slider">
+        {creditCards.map((creditCard) => (
+            <div key={creditCard.cardId} className="creditCardItem">
+            <div>Id: {cardCard.cardId}</div> 
+            <div>{cardCard.CardHolderName}</div> 
+            <div>{creditCard.CVV} off</div> 
+            <div> Valid until {creditCard.expirationDate}</div>
+            <div> --------------------------------------------</div>
+            </div>
+          ))}
+        {/* <div id="slider">
           <input type="radio" name="slider" id="slide1" defaultChecked />
           <input type="radio" name="slider" id="slide2" />
           <input type="radio" name="slider" id="slide3" />
@@ -59,7 +94,7 @@ const PaymentMethod = () => {
           <label htmlFor="slide1" className="slideLabel"></label>
           <label htmlFor="slide2" className="slideLabel"></label>
           <label htmlFor="slide3" className="slideLabel"></label>
-        </div>
+        </div> */}
       </section>
 
       <section className = "KnappenHugo" >

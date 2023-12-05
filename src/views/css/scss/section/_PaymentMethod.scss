@@ -43,6 +43,13 @@
     padding:1rem;
     border: none;
 
+    .creditCardItem{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
     #slider {
       max-width: 600px;
       text-align: center;
