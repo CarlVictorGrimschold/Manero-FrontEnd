@@ -35,7 +35,7 @@ function PromoCodeComponent() {
   };
 
   return (
-    <section className="containerPayment">
+    <section className="promo-codes-container">
       <div className='master'>
         <Link to="/myprofile">
           <i className="fas fa-chevron-left"></i>
@@ -67,9 +67,11 @@ function PromoCodeComponent() {
       <section className="promoCodeList">
         {promoCodes.map((promoCode) => (
           <div key={promoCode.id} className="promoCodeItem">
-            <div>{promoCode.promoName}</div>
-            <div>{promoCode.salePercentage}% off</div>
-            <div>Valid until {promoCode.validity}</div>
+            Id: {promoCode.id}
+            {promoCode.promoName}
+            {promoCode.salePercentage}% off
+            Valid until {promoCode.validity}
+            --------------------------------------------
           </div>
         ))}
       </section>
