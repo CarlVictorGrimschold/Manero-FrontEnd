@@ -38,57 +38,6 @@ const PaymentMethod = () => {
   
     fetchCreditCards();
   }, []);
-
-  // useEffect(() => {
-  //   const fetchCreditCards = async () => {
-  //     try {
-  //       const response = await fetch('https://localhost:7056/api/Card/GetAllUserCards?cardId=${creditCards}',{
-  //         method: 'GET',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           'Authorization': `Bearer ${token}`
-  //         },
-  //         body: JSON.stringify({ cardId: creditCards }), 
-  //       });
-  //       if (!response.ok) {
-  //         throw new Error('Failed to fetch credit cards!');
-  //       }
-  //       const data = await response.json();
-  //       setCreditCard(data);
-  //     } catch (error) {
-  //       console.error('Error fetching credit cards:', error);
-  //     }
-  //   };
-
-  //   fetchCreditCards();
-  // }, []);
-
-  // useEffect(() => {
-  //   const fetchCreditCards = async () => {
-  //     try {
-  //       const response = await fetch('https://localhost:7056/api/Card/GetAllUserCards?cardId=${creditCards}', {
-  //         method: 'GET',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           'Authorization': `Bearer ${token}`
-  //         },
-  //         // No need for a body in a GET request
-  //       });
-  
-  //       if (!response.ok) {
-  //         throw new Error('Failed to fetch credit cards!');
-  //       }
-  
-  //       const data = await response.json();
-  //       setCreditCard(data);
-  //     } catch (error) {
-  //       console.error('Error fetching credit cards:', error);
-  //     }
-  //   };
-  
-  //   fetchCreditCards();
-  // }, [token]); // Include any dependencies that are used inside the useEffect dependency array
-  
   
 
   const deletecard = async () => {
@@ -140,23 +89,6 @@ const PaymentMethod = () => {
             <div> --------------------------------------------</div>
             </div>
           ))}
-        {/* <div id="slider">
-          <input type="radio" name="slider" id="slide1" defaultChecked />
-          <input type="radio" name="slider" id="slide2" />
-          <input type="radio" name="slider" id="slide3" />
-          <div id="slides">
-            <div id="overflow">
-              <div className="inner">
-                <img src={creditCardImage1} alt="Credit Card1" />
-                <img src={creditCardImage2} alt="Credit Card2" />
-                <img src={creditCardImage3} alt="Credit Card3" />
-              </div>
-            </div>
-          </div>
-          <label htmlFor="slide1" className="slideLabel"></label>
-          <label htmlFor="slide2" className="slideLabel"></label>
-          <label htmlFor="slide3" className="slideLabel"></label>
-        </div> */}
       </section>
 
       <section className = "KnappenHugo" >
