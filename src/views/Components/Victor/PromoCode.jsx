@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 function PromoCodeComponent() {
   const [promoCodes, setPromoCodes] = useState([]);
   const [promoCodeToDelete, setPromoCodeIdToDelete] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     const fetchPromoCodes = async () => {
@@ -27,10 +29,14 @@ function PromoCodeComponent() {
       method: 'DELETE',
     });
 
-    if (response.ok) {
-      setPromoCodes(promoCodes.filter(code => code.id !== promoCodeToDelete));
+    if (response.status === 204) {
+      console.log('Delete successfully!');
+      setSuccessMessage('Promo deleted successfully!');
+      setErrorMessage('');
     } else {
-      console.error('Failed to delete the promo code');
+      setSuccessMessage('');
+      setErrorMessage('Failed to delete promo!');
+      console.log('Error: ' + response.status);
     }
   };
 
@@ -64,6 +70,8 @@ function PromoCodeComponent() {
         </div>
         <div>
           <button onClick={deletePromoCode} type="button" className="standard-button">Delete promocodes</button> 
+          {successMessage && (<div className="success-message">{successMessage}</div>)}
+          {errorMessage && (<div className="error-message">{errorMessage}</div>)}
           <section className="PromoCodeDelete">
             <input 
               type="text"
