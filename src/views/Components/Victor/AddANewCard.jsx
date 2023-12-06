@@ -3,11 +3,14 @@ import creditCardImage3 from '../../../Assets/images/loginimages/card3.png';
 import { Link } from 'react-router-dom';
 
 const AddANewCard = () => {
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const [cardDetails, setCardDetails] = useState({
     cardHolderName: '',
     cardNumber: '',
     cvv: '',
     expirationDate: ''
+
   });
 
   const handleChange = (e) => {
@@ -36,8 +39,17 @@ const AddANewCard = () => {
         body: JSON.stringify(formattedDetails),
       });
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+      // if (!response.ok) {
+      //   throw new Error('Network response was not ok');
+      // }
+      if (response.status === 201) {
+        console.log('Changes saved successfully!');
+        setSuccessMessage('Card added successfully!');
+        setErrorMessage('');
+      } else {
+        setSuccessMessage('');
+        setErrorMessage('Failed to save card!');
+        console.log('Error: ' + response.status);
       }
 
       // Hantera framgångsrikt svar här
@@ -99,8 +111,11 @@ const AddANewCard = () => {
           value={cardDetails.expirationDate}
           onChange={handleChange}
         />
-
-        <button type="submit" className="standard-button">SAVE CARD</button>
+        
+        <button onClick={handleSubmit} type="submit" className="standard-button">SAVE CARD</button>  
+        {successMessage && (<div className="success-message">{successMessage}</div>)}
+        {errorMessage && (<div className="error-message">{errorMessage}</div>)}
+        
       </form>
     </section>
   );

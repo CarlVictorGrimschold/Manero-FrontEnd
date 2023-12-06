@@ -1,12 +1,25 @@
 .promo-codes-container {
-    max-width: 400px;
-    margin: auto;
-    font-family: Arial, sans-serif;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  font-family: 'Mulish', sans-serif;
+
+  .master{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+
+    .toptext {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+     }
   }
   
-   .front-text {
-    text-align: center;
-   }
+   
   
   .tabs {
     display: flex;
@@ -60,3 +73,22 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .promoCodeItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+  }
+
+.success-message {
+  color: green;
+  text-align: center;
+  }
+.error-message {
+	text-align: center;
+	color: red;
+  }
+}

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import creditCardImage3 from '../../../Assets/images/loginimages/card2.png';
 import { Link } from 'react-router-dom';
 const EditCard = () => {
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const [cardDetails, setCardDetails] = useState({
     cardHolderName: '',
     cardNumber: '',
@@ -35,8 +37,14 @@ const EditCard = () => {
         body: JSON.stringify(formattedDetails),
       });
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+      if (response.status === 201) {
+        console.log('Changes saved successfully!');
+        setSuccessMessage('Card changed successfully!');
+        setErrorMessage('');
+      } else {
+        setSuccessMessage('');
+        setErrorMessage('Failed to change card!');
+        console.log('Error: ' + response.status);
       }
 
       //Hantera framgångsrikt svar här
@@ -100,6 +108,8 @@ const EditCard = () => {
         />
 
         <button type="submit" className="standard-button">SAVE EDIT</button>
+        {successMessage && (<div className="success-message">{successMessage}</div>)}
+        {errorMessage && (<div className="error-message">{errorMessage}</div>)}
       </form>
     </section>
   );

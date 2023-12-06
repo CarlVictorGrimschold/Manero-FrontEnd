@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const AddANewPromocode = () => {
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   // Uppdaterad state för att spegla strukturen i det önskade JSON-objektet
   const [promocodeDetails, setPromocodeDetails] = useState({
     promoName: '',
@@ -36,8 +38,14 @@ const AddANewPromocode = () => {
         body: JSON.stringify(formattedDetails),
       });
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+      if (response.status === 201) {
+        console.log('Created successfully!');
+        setSuccessMessage('Promo added successfully!');
+        setErrorMessage('');
+      } else {
+        setSuccessMessage('');
+        setErrorMessage('Failed to save promo!');
+        console.log('Error: ' + response.status);
       }
 
       console.log('Promocode added successfully:', await response.json());
@@ -48,13 +56,13 @@ const AddANewPromocode = () => {
 
   return (
     <section className="card-form">
-      <section className="card-form-section">
+      <div className="card-form-section">
         <Link to="/PromoCode"> 
             <i className="fas fa-chevron-left"></i>
         </Link>
         <h1 className="toptext">Add a new Promocode</h1>
         <div className="spacer"></div>
-      </section>
+      </div>
       {/* Övrig kod för layout och design */}
       <form className="input-form" onSubmit={handleSubmit}>
         <label htmlFor="promoName">Promocode Name</label>
@@ -84,6 +92,8 @@ const AddANewPromocode = () => {
         />
 
         <button type="submit" className="standard-button">Save Promocode</button>
+        {successMessage && (<div className="success-message">{successMessage}</div>)}
+        {errorMessage && (<div className="error-message">{errorMessage}</div>)}
       </form>
     </section>
   );
