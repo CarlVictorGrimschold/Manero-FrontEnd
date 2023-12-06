@@ -11,17 +11,20 @@ const PaymentMethod = () => {
   const [cardIdToDelete, setCardIdToDelete] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const token = localStorage.getItem('token');
+
 
   useEffect(() => {
     const fetchCreditCards = async () => {
       try {
-        const response = await fetch('https://localhost:7056/api/Card/GetAllUserCards',{
+        const response = await fetch('https://localhost:7056/api/Card/GetAllUserCards', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
           },
-          body: JSON.stringify({ cardId: creditCards }), // Använd cardIdToDelete från state
+          // If 'cardId' needs to be sent as a query parameter, modify the URL:
+          // e.g., https://localhost:7056/api/Card/GetAllUserCards?cardId=${creditCards}
         });
         if (!response.ok) {
           throw new Error('Failed to fetch credit cards!');
@@ -32,11 +35,61 @@ const PaymentMethod = () => {
         console.error('Error fetching credit cards:', error);
       }
     };
-
+  
     fetchCreditCards();
   }, []);
 
-  const token = localStorage.getItem('token');
+  // useEffect(() => {
+  //   const fetchCreditCards = async () => {
+  //     try {
+  //       const response = await fetch('https://localhost:7056/api/Card/GetAllUserCards?cardId=${creditCards}',{
+  //         method: 'GET',
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //           'Authorization': `Bearer ${token}`
+  //         },
+  //         body: JSON.stringify({ cardId: creditCards }), 
+  //       });
+  //       if (!response.ok) {
+  //         throw new Error('Failed to fetch credit cards!');
+  //       }
+  //       const data = await response.json();
+  //       setCreditCard(data);
+  //     } catch (error) {
+  //       console.error('Error fetching credit cards:', error);
+  //     }
+  //   };
+
+  //   fetchCreditCards();
+  // }, []);
+
+  // useEffect(() => {
+  //   const fetchCreditCards = async () => {
+  //     try {
+  //       const response = await fetch('https://localhost:7056/api/Card/GetAllUserCards?cardId=${creditCards}', {
+  //         method: 'GET',
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //           'Authorization': `Bearer ${token}`
+  //         },
+  //         // No need for a body in a GET request
+  //       });
+  
+  //       if (!response.ok) {
+  //         throw new Error('Failed to fetch credit cards!');
+  //       }
+  
+  //       const data = await response.json();
+  //       setCreditCard(data);
+  //     } catch (error) {
+  //       console.error('Error fetching credit cards:', error);
+  //     }
+  //   };
+  
+  //   fetchCreditCards();
+  // }, [token]); // Include any dependencies that are used inside the useEffect dependency array
+  
+  
 
   const deletecard = async () => {
     const api = 'https://localhost:7056/api/Card/DELETE'; // Ersätt med din faktiska API-endpoint
@@ -78,10 +131,11 @@ const PaymentMethod = () => {
       
       <section className="Cardholding">
         {creditCards.map((creditCard) => (
-            <div key={creditCard.cardId} className="creditCardItem">
-            <div>Id: {cardCard.cardId}</div> 
-            <div>{cardCard.CardHolderName}</div> 
-            <div>{creditCard.CVV} off</div> 
+            <div key={creditCard.id} className="creditCardItem">
+            <div>Id: {creditCard.id}</div> 
+            <div>{creditCard.cardHolderName}</div>
+            <div>{creditCard.cardNumber}</div>  
+            <div>{creditCard.cvv}</div> 
             <div> Valid until {creditCard.expirationDate}</div>
             <div> --------------------------------------------</div>
             </div>
