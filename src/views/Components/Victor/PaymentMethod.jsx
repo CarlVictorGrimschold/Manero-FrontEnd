@@ -23,8 +23,6 @@ const PaymentMethod = () => {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
           },
-          // If 'cardId' needs to be sent as a query parameter, modify the URL:
-          // e.g., https://localhost:7056/api/Card/GetAllUserCards?cardId=${creditCards}
         });
         if (!response.ok) {
           throw new Error('Failed to fetch credit cards!');
@@ -81,7 +79,6 @@ const PaymentMethod = () => {
       <section className="Cardholding">
         {creditCards.map((creditCard) => (
             <div key={creditCard.id} className="creditCardItem">
-            
             <div>Id : {creditCard.id}</div>
             <div> --------------------------------------------</div> 
             <div>Name : {creditCard.cardHolderName}</div>
