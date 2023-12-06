@@ -48,13 +48,13 @@ const AddANewPromocode = () => {
 
   return (
     <section className="card-form">
-      <section className="card-form-section">
+      <div className="card-form-section">
         <Link to="/PromoCode"> 
             <i className="fas fa-chevron-left"></i>
         </Link>
         <h1 className="toptext">Add a new Promocode</h1>
         <div className="spacer"></div>
-      </section>
+      </div>
       {/* Övrig kod för layout och design */}
       <form className="input-form" onSubmit={handleSubmit}>
         <label htmlFor="promoName">Promocode Name</label>

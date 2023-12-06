@@ -36,8 +36,17 @@ const AddANewCard = () => {
         body: JSON.stringify(formattedDetails),
       });
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+      // if (!response.ok) {
+      //   throw new Error('Network response was not ok');
+      // }
+      if (result.status === 201) {
+        console.log('Changes saved successfully!');
+        setSuccessMessage('Changes saved successfully!');
+        setErrorMessage('');
+      } else {
+        setSuccessMessage('');
+        setErrorMessage('Failed to save changes.');
+        console.log('Error: ' + result.status);
       }
 
       // Hantera framgångsrikt svar här
