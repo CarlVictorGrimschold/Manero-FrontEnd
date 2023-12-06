@@ -81,11 +81,13 @@ const PaymentMethod = () => {
       <section className="Cardholding">
         {creditCards.map((creditCard) => (
             <div key={creditCard.id} className="creditCardItem">
-            <div>Id: {creditCard.id}</div> 
-            <div>{creditCard.cardHolderName}</div>
-            <div>{creditCard.cardNumber}</div>  
-            <div>{creditCard.cvv}</div> 
-            <div> Valid until {creditCard.expirationDate}</div>
+            
+            <div>Id : {creditCard.id}</div>
+            <div> --------------------------------------------</div> 
+            <div>Name : {creditCard.cardHolderName}</div>
+            <div>Card Nr : {creditCard.cardNumber}</div>  
+            <div>Cvv : {creditCard.cvv}</div> 
+            <div> Ex Date : {creditCard.expirationDate}</div>
             <div> --------------------------------------------</div>
             </div>
           ))}
