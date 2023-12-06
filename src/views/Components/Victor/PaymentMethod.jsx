@@ -9,6 +9,8 @@ import creditCardImage3 from '../../../Assets/images/loginimages/card3.png';
 const PaymentMethod = () => {
   const [creditCards, setCreditCard] = useState([]);
   const [cardIdToDelete, setCardIdToDelete] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     const fetchCreditCards = async () => {
@@ -48,8 +50,14 @@ const PaymentMethod = () => {
         body: JSON.stringify({ cardId: cardIdToDelete }), // Använd cardIdToDelete från state
       });
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+      if (response.status === 201) {
+        console.log('Changes saved successfully!');
+        setSuccessMessage('Card deleted successfully!');
+        setErrorMessage('');
+      } else {
+        setSuccessMessage('');
+        setErrorMessage('Failed to delete card!');
+        console.log('Error: ' + response.status);
       }
 
       console.log('Card deleted successfully:', await response.json());
@@ -114,7 +122,8 @@ const PaymentMethod = () => {
       <div>
        
         <button onClick={deletecard} type="button" className="standard-button">Remove card</button> 
-        
+        {successMessage && (<div className="success-message">{successMessage}</div>)}
+        {errorMessage && (<div className="error-message">{errorMessage}</div>)}
       </div>
       </section>
       <input 

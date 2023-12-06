@@ -167,5 +167,12 @@
       margin-left: 0.5rem;
     }
 
-    
+  .success-message {
+    color: green;
+    text-align: center;
+    }
+  .error-message {
+    text-align: center;
+    color: red;
+    }
 }
