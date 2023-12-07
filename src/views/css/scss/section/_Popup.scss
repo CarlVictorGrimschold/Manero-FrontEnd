@@ -1,0 +1,33 @@
+.popupen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1%;
+    border: 1px solid #ccc;
+    z-index: 9999;
+     border-radius : 50%;
+     .inner-border {
+    
+        padding:50px; 
+        border-radius: 50%;
+        box-sizing: content-box; 
+        border: 10px solid #ccc;
+
+        .signouttext {
+            font-size: 12px;
+            margin-bottom: 20px;
+            
+            .buttons-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              }
+               
+          }  
+      }
+  }
+  
+  
+  

@@ -1,188 +1,187 @@
 
 
 header {
-    display: flex;
-    justify-content: space-between;
-     align-items: center;
-    top: 0;
-    width: 100%;
-    background-color: $bg-transparent-light-1;
-    height: 50px;
-    .Logotype{
-       width: 100px; 
-    }
-    .logo{
-        font-size: 25px;
-        font-weight: $font-weight-bold;
-        text-decoration: none;
-        color: $color-dark-2;
-        display: flex;
-        justify-content: center;
-    }
+  display: flex;
+  justify-content: space-between;
+   align-items: center;
+  top: 0;
+  width: 100%;
+  background-color: $bg-transparent-light-1;
+  height: 50px;
+  .Logotype{
+     width: 100px; 
+  }
+  .logo{
+      font-size: 25px;
+      font-weight: $font-weight-bold;
+      text-decoration: none;
+      color: $color-dark-2;
+      display: flex;
+      justify-content: center;
+  }
 
-    }
-    .link {
-        position: relative;
-        height: 50px;
-        width: 50px;
-        @include content-center;
-        @include default-colors;
-        text-decoration: none;
-        margin: 0.2rem;
+  }
+  .link {
+      position: relative;
+      height: 50px;
+      width: 50px;
+      @include content-center;
+      @include default-colors;
+      text-decoration: none;
+      margin: 0.2rem;
 
-        &:hover,
-        &.active {
-            text-decoration: none;
-        }
+      &:hover,
+      &.active {
+          text-decoration: none;
+      }
 }
 
 
-  .overlay {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
-    text-align: center;
-    display: none;
-    z-index: 1001; /* Hög z-index för att lägga över andra element */
+.overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  display: none;
+  z-index: 1001; /* Hög z-index för att lägga över andra element */
+}
+
+.overlay-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 66%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.975);
+  color: white;
+  display: none;
+  z-index: 10; 
+}
+
+.overlay-background.visible,
+.overlay.visible {
+  display: block;
+}
+
+.contact-big-box{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  height: 70%;
+  width: auto;
+  font-family: $font-poppins;
+  p{
+      color: rgb(198, 197, 197);
+      font-style: $breakpoint-md;
+      font-size: small;
   }
-  
-  .overlay-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 66%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.975);
-    color: white;
-    display: none;
-    z-index: 1; 
+
+  .Contact-header{
+      
+     
+      height: 20%;
+      text-align: center;
+
   }
-  
-  .overlay-background.visible,
-  .overlay.visible {
-    display: block;
+  .Contact-adress-box{
+      margin-top: 25px;
+      border-bottom: 1px solid white;
+      height: 20%;
+      text-align: center;
+
   }
+  .Contact-email-box{
+      margin-top: 20px;
+      border-bottom: 1px solid white;
+      height: 20%;
+      text-align: center;
 
-  .contact-big-box{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 50px;
-    height: 70%;
-    width: auto;
-    font-family: $font-poppins;
-    p{
-        color: rgb(198, 197, 197);
-        font-style: $breakpoint-md;
-        font-size: small;
-    }
+  }
+  .Contact-phone-box{
+      margin-top: 20px;
+      border-bottom: 1px solid white;
+      height: 20%;
+      text-align: center;
 
-    .Contact-header{
-        
-       
-        height: 20%;
-        text-align: center;
+  }
+  .Contact-track-box{
+      height: 40%;
+      margin-left: 20px;
+      margin-top: 20px;
 
+  }
+  .contact-button{
+      margin-top: 25px;
+  }
+  :root {
+      //--background-size: 50vw;
+      --background-size: unquote('min(100vw, 40em)');
     }
-    .Contact-adress-box{
-        margin-top: 25px;
-        border-bottom: 1px solid white;
-        height: 20%;
-        text-align: center;
-
-    }
-    .Contact-email-box{
-        margin-top: 20px;
-        border-bottom: 1px solid white;
-        height: 20%;
-        text-align: center;
-
-    }
-    .Contact-phone-box{
-        margin-top: 20px;
-        border-bottom: 1px solid white;
-        height: 20%;
-        text-align: center;
-
-    }
-    .Contact-track-box{
-        height: 40%;
-        margin-left: 20px;
-        margin-top: 20px;
-
-    }
-    .contact-button{
-        margin-top: 25px;
-    }
-    :root {
-        //--background-size: 50vw;
-        --background-size: unquote('min(100vw, 40em)');
-      }
+    
+    .input-group {
+      width: 75%;
       
-      .input-group {
-        width: 75%;
-        
-        max-width: 20em;
-        display: flex;
-        flex-direction: column;
-        z-index: 2;
-      
-        @supports (mix-blend-mode: darken) {
-          position: relative;
-          mix-blend-mode: lighten;
-      
-          &__label {
-            position: absolute;
-            left: 3em;
-            top: -0.28em;
-            background: #000;
-          }
-        }
-      
+      max-width: 20em;
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+    
+      @supports (mix-blend-mode: darken) {
+        position: relative;
+        mix-blend-mode: lighten;
+    
         &__label {
-          padding: 0 0.5em;
-          margin-bottom: 0.5em;
-          text-transform: uppercase;
-          font-size: 0.875em;
-          letter-spacing: 0.1em;
-          color: white;
-          
-          cursor: pointer;
-        }
-      
-        &__input {
-            color: white;
-          font-size: 0.7rem;
-          line-height: 1;
-          border-style: none;
-          outline: none;
-          // height calc line-height + (vertical-padding * 2) + (vertical-border * 2)
-          height: calc(1em + 1.6em + 0.5em);
-          width: 100%;
-          padding: 0.8em 1em;
-          border: 0.15em solid white;
-          background-image: linear-gradient(#000, #000);
-          background-origin: border-box;
-          background-clip: padding-box, border-box;
-          border-radius: 1.8em;
-          background-size: 200% 100%;
-          transition: background-position 0.8s ease-out;
-          
-          &:hover {
-            background-position: 100% 0;
-          }
-      
-         
+          position: absolute;
+          left: 3em;
+          top: -0.28em;
+          background: #000;
         }
       }
-      
-      
-      
-  }
- 
-  
+    
+      &__label {
+        padding: 0 0.5em;
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+        font-size: 0.875em;
+        letter-spacing: 0.1em;
+        color: white;
+        
+        cursor: pointer;
+      }
+    
+      &__input {
+          color: white;
+        font-size: 0.7rem;
+        line-height: 1;
+        border-style: none;
+        outline: none;
+        // height calc line-height + (vertical-padding * 2) + (vertical-border * 2)
+        height: calc(1em + 1.6em + 0.5em);
+        width: 100%;
+        padding: 0.8em 1em;
+        border: 0.15em solid white;
+        background-image: linear-gradient(#000, #000);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        border-radius: 1.8em;
+        background-size: 200% 100%;
+        transition: background-position 0.8s ease-out;
+        
+        &:hover {
+          background-position: 100% 0;
+        }
+    
+       
+      }
+    }
+    
+    
+    
+}
+

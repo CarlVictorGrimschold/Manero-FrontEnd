@@ -50,7 +50,7 @@ const FeaturedProducts = () => {
     getProducts("products");
   }, []);
 
-  console.log('Products:', products); // Lägger till denna log för att inspektera värdet av products
+  //console.log('Products:', products); // Lägger till denna log för att inspektera värdet av products
 
   return (
     <div>
