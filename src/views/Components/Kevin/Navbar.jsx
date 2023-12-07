@@ -15,17 +15,21 @@ const Navbar = () => {
       </Link>
       <Link to ="/myprofile">
            <div>
-                <div className="/myprofile" href="#">
+                <div className="link" href="#">
                     <i className="fa-regular fa-circle-user">
                     </i>
                 </div>
             </div>
       </Link>
+      <Link to ="/Categoryview">
+           <div>
+                <div className="link">
+                <i className="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+      </Link>
 
 
-    <div>
-    <a className="link"><i className="fa-solid fa-magnifying-glass"></i></a>
-    </div>
     <div>
     <a className="link" href="#"><i className="fa-regular fa-bag-shopping"></i>
       </a>

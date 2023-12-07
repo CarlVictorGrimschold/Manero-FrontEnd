@@ -17,6 +17,8 @@ import PaymentmethodeSite from './components/view/Paymentmethodview'
 import EditProfileView from './components/view/EditprofileView'
 import AddANewPromocode from'./views/Components/Victor/AddANewPromocode' 
 import PromoCode from'./views/Components/Victor/PromoCode'
+import CategoryView from './views/Components/Kevin/CategoryView'
+
 function App() {
   return (
     <BrowserRouter>
@@ -38,6 +40,7 @@ function App() {
         <Route path="/editeprofileview" element={<EditProfileView/>}/>
         <Route path="/AddANewPromocode" element ={<AddANewPromocode/>}/> 
         <Route path="PromoCode" element = {<PromoCode/>}/>
+        <Route path='/Categoryview' element = {<CategoryView/>}/>
       </Routes>
     </BrowserRouter>
   )
