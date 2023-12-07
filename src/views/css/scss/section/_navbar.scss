@@ -8,4 +8,10 @@ footer{
     left: 0;
     width: 100%;
     border-top: 1px solid $color-shadow-2 ;
+    Link{
+        text-decoration: none;
+    }
+}
+a{
+    all: unset;
 }
