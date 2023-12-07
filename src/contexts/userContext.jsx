@@ -1,19 +1,17 @@
-//Usercontext.jsx fil 
-
 import { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
-import "../views/css/style.min.css"
-
+import { Link } from 'react-router-dom'; 
+import Popup from "../components/partials/Popup";
+import Header from "../views/Components/Kevin/Header";
+ 
 function UserContext() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [imageurl, setimageUrl] = useState (null);
-
+  const [showPopup, setShowPopup] = useState(false);  
   useEffect(() => {
     const fetchData = async () => {
       try {
-
           const token = localStorage.getItem("token"); 
           const result = await fetch('https://localhost:7056/api/Profile/Get', {
             headers: {
@@ -21,11 +19,11 @@ function UserContext() {
             },
          });
         
-        console.log(result);
+        //console.log(result);
         
         if (result.status === 200) {
           const data = await result.json();
-          console.log(data);
+         // console.log(data);
           setFirstName(data.user.firstName);
           setLastName(data.user.lastName);
           setEmail(data.user.email);
@@ -46,37 +44,53 @@ function UserContext() {
         console.error('Error fetching data:', error);
       }
     };
-
     fetchData();
   }, []);
-
+  function signout() { 
+    setShowPopup(true);
+  }
+  function handleConfirmSignout() { 
+    setShowPopup(false);
+    localStorage.removeItem("token");
+    localStorage.removeItem("apiKey"); 
+    window.location.href = "/loginview"; 
+  }
+  function handleCancelSignout() { 
+    setShowPopup(false);
+  }
   return (
     <div className="MyProfileForm">      
-       <section className="userinformation">
-        {/* user edit profile */}
+    
+
+    
+              <Header></Header>
+               
+     
+    <Popup
+        onConfirm={handleConfirmSignout}
+        onCancel={handleCancelSignout}
+        show={showPopup}
+      /> 
       <section className="circles">
         <div className="bigcircle">
             <div className="mediumcircle">
               <img src={imageurl} alt=""/>
                 <div className="smallcircle">
                     <div className="pen">
-                        <a href="/editeprofileview">
-                          <i className="fa-light fa-pen"></i>
-                        </a>
+                    <Link to="/editeprofileview">
+                      <i className="fa-light fa-pen"></i>
+                      </Link> 
                     </div>
                 </div>
             </div>
         </div>
         </section>
-
                 <div className="userinfo">
                   <div className="container-user-info">
                     <h1> {firstName} - {lastName} </h1>
                     <p> {email}</p>
                   </div>
-                </div>
-            </section>
-
+                </div> 
         {/* user profile option */}
         <section className="user-profile-options">
            
@@ -92,16 +106,13 @@ function UserContext() {
                                 <p>Order History</p>
                               </div>
                               <div>
-                              <Link to="/order-history">
-                                  <a>
+                              <Link to="/order-history"> 
                                   <i className="fa-thin fa-arrow-right"></i>
-                                  </a>
                               </Link>
                               </div>
                             </div>
                         </div>
                         {/* test */}
-
                     <div className="strek2"></div>
                     
                         <div className="payment-method">                    
@@ -112,7 +123,6 @@ function UserContext() {
                          </Link>
                         </div>
                     
-
                     <div className="strek2"></div>
                     
                         <div className="my-address">
@@ -131,15 +141,17 @@ function UserContext() {
                     </div>
                     <div className="strek2"></div>
                     <div className="sign-out">
-                    <i className="fa-thin fa-right-from-bracket"></i>
-                        <p>Sign out</p>
-                    <i className="fa-thin fa-arrow-right"></i>
-                    </div>
-
+          <i className="fa-thin fa-arrow-right-from-bracket"></i>
+          <p>Sign out</p>
+          <a className='field' href='#' onClick={e => { signout() }} id='signout' data-testid='signout'>
+          <i className="fa-thin fa-arrow-right"></i>
+          </a>
+        </div>
                 </section>
-
+              
+       
+     
     </div>
   );
 }
-
 export default UserContext;

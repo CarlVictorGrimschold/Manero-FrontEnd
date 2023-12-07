@@ -1,10 +1,13 @@
 import UserContext from "../../contexts/userContext";
+import Navbar from "../../views/Components/Kevin/Navbar";
 import MyProfile from "../partials/MyProfileForm";
 function Myprofileview(){
     return(
         <div>
-            <MyProfile/>
+            
             <UserContext/>
+            <Navbar/>
+        
         </div>
     );
 }

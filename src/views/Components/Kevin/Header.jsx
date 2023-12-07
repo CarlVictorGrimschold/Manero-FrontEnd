@@ -15,7 +15,7 @@ const Header = () => {
         </a>
       </div>
       <div className="Logotype">
-        <a className="logo" href="index.html">MANERO</a>
+        <a className="logo" href="/homepageview">MANERO</a>
       </div>
       <div className="Shopping-cart">
         <a className="link" href="#"><i className="fa-regular fa-bag-shopping"></i></a>
@@ -35,27 +35,27 @@ const Header = () => {
             <h2>Contact us</h2>
             </div>
           <div className='Contact-adress-box'>
-          <i class="fa-solid fa-location-dot"></i>
+          <i className="fa-solid fa-location-dot"></i>
             <p>27 Division St, New york,</p>
             <p>NY 10002, USA</p>
           </div>
           <div className='Contact-email-box'>
-          <i class="fa-solid fa-envelope"></i>
+          <i className="fa-solid fa-envelope"></i>
             <p>manerosale@gmail.com</p>
             <p>manerosupport@gmail.com</p>
           </div>
           <div className='Contact-phone-box'>
-          <i class="fa-solid fa-phone"></i>
+          <i className="fa-solid fa-phone"></i>
             <p>+17 123456789</p>
             <p>+17 987654321</p>
           </div>
           <div className='Contact-track-box'>
             <p>Track your order</p>
-            <div class="contact-button">
-              <div class="input-group">
-              <label class="input-group__label" for="myInput">
+            <div className="contact-button">
+              <div className="input-group">
+              <label className="input-group__label" htmlFor="myInput">
                 Oder number</label>
-              <input type="text" id="myInput" class="input-group__input" value="10002" />
+              <input type="text" id="myInput" className="input-group__input" onChange={toggleOverlay} value="10002" />
                </div>
             </div>
 
