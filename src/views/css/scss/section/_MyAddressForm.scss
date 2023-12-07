@@ -1,0 +1,64 @@
+.MYADDRESSFORM {
+    body {
+        margin: 0 25px 0 25px;
+    }
+
+
+    .my-address {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Mulish', sans-serif;
+        font-weight: 900;
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    .goblack {
+        font-size: 23px;
+        font-weight: 0;
+    }
+    .user-address {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .home-addres-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .home-icon {
+        font-size: larger;
+        margin-left: 20px;
+    }
+    
+    .home-text {
+        font-size: larger;
+        font-weight: 900;
+        font-family: 'Mulish', sans-serif;
+        text-align: left;
+        margin-left: 30px;
+    }
+    
+    .streetname-zipcode {
+        font-family: 'Mulish', sans-serif;
+        text-align: left;
+        margin-left: -50px;
+        margin-top: 20px;
+        padding-top: 25px;
+    }
+    
+    .home-navigate-addres {
+        margin-left: auto; /* Flytta länken till höger */
+        margin-right: 20px;
+    }
+    
+    .strek2 {
+        background-color: #ccc;
+        height: 1px;
+        margin-top: 30px;
+    }
+    
+
+}
