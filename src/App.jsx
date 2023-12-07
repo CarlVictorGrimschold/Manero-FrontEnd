@@ -18,6 +18,8 @@ import EditProfileView from './components/view/EditprofileView'
 import AddANewPromocode from'./views/Components/Victor/AddANewPromocode' 
 import PromoCode from'./views/Components/Victor/PromoCode'
 import CategoryView from './views/Components/Kevin/CategoryView'
+import MyAddressView from './components/view/MyAddressView'
+import AddAddressView from './components/view/AddAddressView'
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
         <Route path="/AddANewPromocode" element ={<AddANewPromocode/>}/> 
         <Route path="PromoCode" element = {<PromoCode/>}/>
         <Route path='/Categoryview' element = {<CategoryView/>}/>
+        <Route path="/myaddressview" element={<MyAddressView/>} />
+        <Route path="/addaddressview" element = {<AddAddressView/>}/>
       </Routes>
     </BrowserRouter>
   )

@@ -123,13 +123,16 @@ function UserContext() {
                          </Link>
                         </div>
                     
-                    <div className="strek2"></div>
+                        <div className="strek2"></div>
                     
-                        <div className="my-address">
-                        <i className="fa-thin fa-location-dot"></i>
-                            <p>My Address</p>
-                        <i className="fa-thin fa-arrow-right"></i>
-                        </div>
+                    <div className="my-address">
+                    <i className="fa-thin fa-location-dot"></i>
+                        <p>My Address</p>
+                        <Link to ="/myaddressview">
+                            <i className="fa-thin fa-arrow-right"></i>
+                        </Link>
+                    </div>
+
                         
                     <div className="strek2"></div>
                     <div className="my-promocodes">
