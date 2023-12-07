@@ -35,21 +35,7 @@ header {
           text-decoration: none;
       }
 }
-
-
-.overlay {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  color: white;
-  text-align: center;
-  display: none;
-  z-index: 1001; /* Hög z-index för att lägga över andra element */
-}
+ 
 
 .overlay-background {
   position: fixed;
