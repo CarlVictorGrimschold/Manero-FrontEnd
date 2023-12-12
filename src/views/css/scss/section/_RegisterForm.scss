@@ -1,158 +1,164 @@
-body {
-    margin: 0 15px 0 15px;
-}
+.RegisteerForm {
 
 
-.signup1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+        
+    body {
+        margin: 0 15px 0 15px;
+    }
 
-.goblack {
-    font-size: 23px;
-    font-weight: 0;
-}
 
-.strek {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  margin-top: 60px;
-}
+    .signup1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-  /* .signup-section {
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    margin: 0;
-  } */
+    .goblack {
+        font-size: 23px;
+        font-weight: 0;
+    }
 
-  .signup {
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    margin: 0;
-    font-size: 45px;
-    margin-bottom: 30px;
-  }
-
-.labels {
+    .strek {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    font-size: 40px;
+    margin-top: 60px;
+    }
 
-.form-group {
-    position: relative; /* Skapar ett relativt positionerat element */
-}
+    /* .signup-section {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        margin: 0;
+    } */
 
-.placeholder {
-    position: absolute; /* Gör labeln positionerad absolut */
-    top: -9px; /* Justera vertikalt för att placera den ovanpå gränsen */
-    left: 18px; /* Justera horisontellt efter ditt behov */
-    background-color: white; /* Lägg till en bakgrundsfärg för att täcka gränsen */
-    padding: 0 5px; /* Justera padding för stil och layout */
-    font-size: 14px;
-    color:#8f8f8f; 
-}
+    .signup {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        margin: 0;
+        font-size: 45px;
+        margin-bottom: 30px;
+    }
 
-.form-control {
-    border: 1px solid #ccc; /* Exempel på gränsdesign */
-    padding: 10px; 
-    border-radius: 30px;
-    height: 30px;
-    width: 300px;
-    font-size: 15px; 
-}
+    .labels {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-/* .sign-up-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: #fff;
-    font-size: 19px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    height: 50px;
-    width: 326px;
-    margin-top: 20px;
-} */
-.form-group1 {
-    display: flex;
-}
+    .form-group {
+        position: relative; 
+    }
 
-.text2 {
-    color: #898888;
-    margin-left: 8px;
-}
-.sign-in {
-    margin-left: 9px;
-}
+    .placeholder {
+        position: absolute; 
+        top: -9px; 
+        left: 18px;
+        background-color: white; 
+        padding: 0 5px; 
+        font-size: 14px;
+        color:#8f8f8f; 
+    }
 
-a {
-    text-decoration: none;
-    color: black;
-    font-family: 'Mulish', sans-serif;
-}
+    .form-control {
+        border: 1px solid #ccc; 
+        padding: 10px; 
+        border-radius: 30px;
+        height: 30px;
+        width: 300px;
+        font-size: 15px; 
+    }
 
-/* .MANERO {
-    display: flex;
-    justify-content: space-around;
-}
+    /* .sign-up-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: #fff;
+        font-size: 19px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        height: 50px;
+        width: 326px;
+        margin-top: 20px;
+    } */
+    .form-group1 {
+        display: flex;
+    }
 
-.TW {
-    text-align: center;
-}
-.FB {
-    text-align: right;
-    margin-left: 45px;
-}
-.GP {
-    margin-right: 45px;
-    text-align: left;
-}
+    .text2 {
+        color: #898888;
+        margin-left: 8px;
+    }
+    .sign-in {
+        margin-left: 9px;
+    }
 
-.FB img, .TW img, .GP img {
-    width: 70px; 
-    margin-top: 30px;
-} */
+    a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Mulish', sans-serif;
+    }
 
-.sendbtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-.send-button {
-    background-color: black;
-    color: #fff;
-    font-size: 19px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    height: 55px;
-    width: 100%;
-}
+    /* .MANERO {
+        display: flex;
+        justify-content: space-around;
+    }
 
-// .error-messages {
-//     display: flex;
-//     justify-content: center;
-//     color: red;
-// }
-.errormessagesignup {
-    text-align: center;
-    color: red;
-    margin-top: 5px;
-}
-.error-message {
-    color: red;
-    text-align: center;
-    margin-top: 3px;
+    .TW {
+        text-align: center;
+    }
+    .FB {
+        text-align: right;
+        margin-left: 45px;
+    }
+    .GP {
+        margin-right: 45px;
+        text-align: left;
+    }
+
+    .FB img, .TW img, .GP img {
+        width: 70px; 
+        margin-top: 30px;
+    } */
+
+    .sendbtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .send-button {
+        background-color: black;
+        color: #fff;
+        font-size: 19px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        height: 55px;
+        width: 100%;
+    }
+
+    // .error-messages {
+    //     display: flex;
+    //     justify-content: center;
+    //     color: red;
+    // }
+    .errormessagesignup {
+        text-align: center;
+        color: red;
+        margin-top: 5px;
+    }
+    .error-message {
+        color: red;
+        text-align: center;
+        margin-top: 3px;
+    }
+
 }

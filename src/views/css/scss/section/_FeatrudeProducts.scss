@@ -1,19 +1,35 @@
 .product-collection {
     margin-top: 40px;
+    font-family: $font-poppins;
+    margin-bottom: 50px;
 
 
 
+
+    .Featured-header{
+        display: flex;
+        justify-content: space-between;
+        
+    }
     .title {
         font-size: 20px;
         font-weight: 700;
-        text-align: center;
-        margin-top: 40px;
+        text-align: left;
+        
         margin-bottom: 30px;
+    }
+    .View-All{
+        margin-top: 5px;
+        font-size: 15px;
+        font-weight: 400;
+        text-decoration: none;
+        color: $color-dark-1;
+
     }
 
     .collection-grid {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 30px;
 
 
@@ -37,19 +53,21 @@
 
                 img {
                     width: 100%;
-                    object-fit: cover;
+                    object-fit: fill;
+                    height: 200px;
                 }
 
                 .icons {
                     position: absolute;
-                    top: 15px;
-                    right: 15px;
+                    top: 5px;
+                    right: 5px;
                 }
+               
 
                 .icons .link {
-                    height: 50px;
-                    width: 50px;
-                    font-size: 22px;
+                    height: 25px;
+                    width: 25px;
+                    font-size: 13px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -78,15 +96,6 @@
                         text-decoration: none;
                     }
                 }
-
-                .btn-theme {
-                    position: absolute;
-                    bottom: 0px;
-                    left: 0;
-                    right: 0;
-                    text-align: center;
-                    padding: 15px;
-                }
             }
 
 
@@ -105,31 +114,25 @@
 
 
             .card-body {
-                text-align: center;
+                text-align: left;
             }
-
-                .category {
-                    font-size: 16px;
-                    font-weight: 500;
-                    color: #616365;
-                    margin-top: 15px;
-                }
 
                 .title {
                     margin-top: 10px;
-                    font-size: 20px;
-                    font-weight: 700;
+                    font-size: 12px;
+                    font-weight: 400;
                     margin-bottom: 0px;
+                    color: $color-dark-3;
                 }
 
                 .ranking {
-                    color: #ff7373;
+                    color: yellow;
                     font-size: 20px;
                     margin-top: 10px;
                 }
 
                 .price {
-                    font-size: 22px;
+                    font-size: 17px;
                     font-weight: 700;
                     margin-top: 10px;
                     margin-bottom: 0px;

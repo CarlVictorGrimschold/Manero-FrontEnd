@@ -7,24 +7,39 @@ const Navbar = () => {
    <footer>
     <Link to="/homepageview">
           <div>
-              <a className="link">
+              <div className="link">
                 <i className="fa-solid fa-house"></i>
-              </a>
+              </div>
           </div>
+          
       </Link>
-    <div>
-    <a class="link"><i class="fa-solid fa-magnifying-glass"></i></a>
-    </div>
+      <Link to ="/myprofile">
+           <div>
+                <div className="link" href="#">
+                    <i className="fa-regular fa-circle-user">
+                    </i>
+                </div>
+            </div>
+      </Link>
+      <Link to ="/Categoryview">
+           <div>
+                <div className="link">
+                <i className="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+      </Link>
+
+
     <div>
     <a className="link" href="#"><i className="fa-regular fa-bag-shopping"></i>
       </a>
     </div>
     <div>
-    <a class="link" href="#"><i class="fa-regular fa-heart"></i></a>
+    <a className="link" href="#"><i className="fa-regular fa-heart"></i></a>
     </div>
-    <div>
+    {/* <div>
     <a class="link" href="#"><i class="fa-regular fa-circle-user"></i></a>
-    </div>
+    </div> */}
    </footer>
   );
 }

@@ -1,10 +1,17 @@
 footer{
     display: flex;
     justify-content: space-between;
+    background-color: $color-light-1;
      align-items: center;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     border-top: 1px solid $color-shadow-2 ;
+    Link{
+        text-decoration: none;
+    }
+}
+a{
+    all: unset;
 }

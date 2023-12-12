@@ -1,0 +1,94 @@
+.promo-codes-container {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  font-family: 'Mulish', sans-serif;
+
+  .master{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+
+    .toptext {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+     }
+  }
+  
+   
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .tab.active {
+    background-color: black;
+    color: white;
+  }
+  
+  .promo-code {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .company-name {
+    font-weight: bold;
+  }
+  
+  .discount {
+    color: red;
+    font-size: 1.2em;
+  }
+  
+  .validity {
+    color: grey;
+  }
+  .KnappenHugo2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+   
+  }
+  .PromoCodeDelete {
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promoCodeItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+  }
+
+.success-message {
+  color: green;
+  text-align: center;
+  }
+.error-message {
+	text-align: center;
+	color: red;
+  }
+}

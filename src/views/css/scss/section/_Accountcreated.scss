@@ -1,78 +1,82 @@
-.MANERO {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-.MANERO2 {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-.MANERO2 img {
-    width: auto;
-    margin-bottom: -40px;
-}
-.strek {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-}
 
-.passwordmessage {
-    display: flex;
-    justify-content: center;
-    margin-top: 8px;
-    font-size: 25px;
-    font-family: 'Mulish', sans-serif;
-    font-weight: 700;
-}
-.txt1 {
-    display: flex;
-    justify-content: center;
-    color:#4f4f4f;
-    margin-top: 5px;
-    font-family: 'Mulish', sans-serif;
-    font-size: 18px;
-}
+.AccountCreated {
 
-.sendbtn {
-    display: flex;
-    justify-content: center; /* Centrera horisontellt */
-    align-items: center; /* Centrera vertikalt */
-    height: 55px;
-    width: 350px;
-    margin: 0 auto; /* Horisontell mittenjustering */
-    border-radius: 30px;
-    background-color: black;
-    margin-top: 40px;
-}
-.hompageview{
-    padding: 10px 20px; 
-    color: #fff; 
-    text-decoration: none; 
-    border: none; 
-    cursor: pointer;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Mulish', sans-serif;
-}
-.footer1 {
-    text-decoration: none;
-    margin-bottom: 40px;
-    margin-top: 40px;
-}
-// .send-button {
-//     background-color: black;
-//     color: #fff;
-//     font-size: 17px;
-//     padding: 10px 20px;
-//     border: none;
-//     border-radius: 25px;
-//     cursor: pointer;
-//     height: 55px;
-//     width: 350px;
-//     margin-top: 30px;
-// }
 
+        .MANERO {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .MANERO2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .MANERO2 img {
+            width: auto;
+            margin-bottom: -40px;
+        }
+        .strek {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+        }
+
+        .passwordmessage {
+            display: flex;
+            justify-content: center;
+            margin-top: 8px;
+            font-size: 25px;
+            font-family: 'Mulish', sans-serif;
+            font-weight: 700;
+        }
+        .txt1 {
+            display: flex;
+            justify-content: center;
+            color:#4f4f4f;
+            margin-top: 5px;
+            font-family: 'Mulish', sans-serif;
+            font-size: 18px;
+        }
+
+        .sendbtn {
+            display: flex;
+            justify-content: center; /* Centrera horisontellt */
+            align-items: center; /* Centrera vertikalt */
+            height: 55px;
+            width: 350px;
+            margin: 0 auto; /* Horisontell mittenjustering */
+            border-radius: 30px;
+            background-color: black;
+            margin-top: 40px;
+        }
+        .hompageview{
+            padding: 10px 20px; 
+            color: #fff; 
+            text-decoration: none; 
+            border: none; 
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Mulish', sans-serif;
+        }
+        .footer1 {
+            text-decoration: none;
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+        // .send-button {
+        //     background-color: black;
+        //     color: #fff;
+        //     font-size: 17px;
+        //     padding: 10px 20px;
+        //     border: none;
+        //     border-radius: 25px;
+        //     cursor: pointer;
+        //     height: 55px;
+        //     width: 350px;
+        //     margin-top: 30px;
+        // }
+}
 
